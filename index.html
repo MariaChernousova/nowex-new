@@ -157,12 +157,12 @@
     <section class="diploms"></section>
     <footer></footer> -->
     <header>
-            <div class="container">
-                        <div class="row mx-auto">
+            <div class="header-content">
+                        <div class="logo">
                             <a href="#">
                                 <img src="./images/logo.png" alt="logo">
                             </a>
-                            <div class="col-lg-6 heder-right d-flex flex-row float-right">
+                            <div class="header-information">
                                 <div class="phones">
                                     <ul>
                                         <li>
@@ -402,18 +402,68 @@
         <button type="submit">Learn more!</button>
     </section>
     <section class="sertificates"></section>
-    <footer></footer>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer-information">
+                <div class="rights">
+                    <p>
+                        This is a blurb about the company sed do eiusmod tempor
+                        incididunt ut labore et dolore ex magna aliqua. 
+                    </p>
+                </div>
+                <div class="links">
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-facebook-official"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-youtube-square"></i>
+                    </a>
+                </div>
+                <div class="navigation">
+                    <h4>Navigation links</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Main</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Goods</a>
+                        </li>
+                        <li>
+                            <a href="#">Gallary</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script type="text/javascript">
         $('.autoplay').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  swipe: true,
   autoplay: true,
   autoplaySpeed: 3000,
   centerMode: true,
   variableWidth: true,
-  pauseOnFocus: true
+  pauseOnFocus: true,
+  focusOnSelect: true,
+  respondTo: 'window'
 });
     </script>
 </body>
