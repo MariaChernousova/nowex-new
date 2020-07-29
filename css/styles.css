@@ -1,14 +1,47 @@
 body{
-    padding: 2% 15%;
+    padding:0;
+    margin: 0;
 }
 li{
     list-style: none;
 }
+.header-content, nav, .header-text, .about-block, .manufacturers, .goods, .advantages, .box, footer{
+  padding: 0 10%;
+  margin-bottom: 10px;
+}
+/****************************************************************/
+/* Header */
+/****************************************************************/
+header{
+  background-image: url(../images/banerr.jpg);
+  background-size: cover;
+}
+header .header-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo{
+  padding-top: 10px;
+}
+.logo img{
+  max-width: 300px;
+  height: auto;
+}
+.phones, .adress, .language{
+  padding: 0 65px;
+  color: #FFF;
+}
+header .header-text{
+  padding-bottom: 23%;
+}
+/****************************************************************/
 /* Navigation */
 /****************************************************************/
 .menu {
-    background: #ccc;
+    background: #FFF;
     height: 4rem;
+    margin: 0 10%;
+    margin-bottom: 15%;
   }
   .menu ol {
     list-style-type: none;
@@ -54,7 +87,7 @@ li{
   }
   .sub-menu .menu-item {
     padding: 0.75rem 0;
-    background: #ccc;
+    background: #FFF;
     opacity: 0;
     transform-origin: bottom;
     animation: enter 0.2s ease forwards;
@@ -200,67 +233,6 @@ li{
 /****************************************************************/
 /* Manufacturers */
 /****************************************************************/
-
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
-  }
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
-  }
-}
-.slider {
-  background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 960px;
-}
-.slider::before, .slider::after {
-  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
-  display: -webkit-box;
-  display: flex;
-  width: calc(250px * 14);
-}
-.slider .slide {
-  height: 100px;
-  width: 250px;
-}
 /****************************************************************/
 /* Goods cards */
 /****************************************************************/
