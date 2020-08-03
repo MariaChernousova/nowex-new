@@ -431,3 +431,21 @@ button:hover::after {
 .advantages-card{
   padding: 0 20px;
 }
+/****************************************************************/
+/* Box */
+/****************************************************************/
+.box{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  padding: 20px 45px;
+  margin-top: -40px;
+  background-color: #FFF;
+}
+.box-block h3{
+  width: 400px;
+}
+.box-block button{
+  float: right;
+}
