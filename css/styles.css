@@ -1,3 +1,6 @@
+*{
+  padding-right: 0;
+}
 body{
     padding:0;
     margin: 0;
@@ -300,7 +303,28 @@ button:hover::after {
 .manufacturers-block{
   display: flex;
   flex-direction: row;
-  margin-bottom: 3em;
+  margin-bottom: 6em;
+}
+.manufacturers .title-block,
+.manufacturers h2{
+  padding-left: 150px;
+}
+/****************************************************************/
+/* Gallary */
+/****************************************************************/
+.gallery img{
+  max-height: 400px;
+  padding: 6px;
+}
+.gallery{
+  background-color: #42382a;
+  padding: 2em 0 1em 0;
+  margin-bottom: 4em;
+}
+.gallery .title-block,
+.gallery h2{
+  padding-left: 290px;
+  color: #FFF;
 }
 /****************************************************************/
 /* Goods cards */
@@ -359,6 +383,17 @@ button:hover::after {
   .title-black {
     color: black;
   }
+  .goods .title-block,
+  .goods h2{
+    padding-left: 150px;
+  }
+
+  .goods button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+  }
   
   @media all and (max-width: 500px) {
     .card-list {
@@ -367,9 +402,32 @@ button:hover::after {
     }
   }
 /****************************************************************/
-/* Gallary */
+/* Advantages */
 /****************************************************************/
-.gallery img{
-  max-height: 400px;
-  padding: 10px;
+/* .advantages-header{
+  display: flex;
+  flex-direction: row;
+} */
+.advantages{
+  background-color: #42382a;
+  padding-top: 5em;
+  padding-bottom: 4em;
+  color: #FFF;
+}
+.advantages .title-block,
+.advantages h2{
+  padding-left: 150px;
+}
+.advantages-header img{
+  width: 417px;
+  height: auto;
+  margin-top: -298px;
+  float: right;
+}
+.advantages-block{
+  display: flex;
+  flex-direction: row;
+}
+.advantages-card{
+  padding: 0 20px;
 }
