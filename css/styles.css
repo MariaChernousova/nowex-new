@@ -13,6 +13,7 @@ li{
   padding: 0 10%;
   margin-bottom: 10px;
 }
+
 /****************************************************************/
 /* Header */
 /****************************************************************/
@@ -443,9 +444,12 @@ button:hover::after {
   margin-top: -40px;
   background-color: #FFF;
 }
-.box-block h3{
-  width: 400px;
+.box-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .box-block button{
-  float: right;
+  height: 40px;
+  padding: 10px 25px;
 }
