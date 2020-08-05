@@ -4,7 +4,7 @@
 body{
     padding:0;
     margin: 0;
-    background-color: #fff9f6;
+    background-color: #f8f5f4;
 }
 li{
     list-style: none;
@@ -18,7 +18,7 @@ li{
 /* Header */
 /****************************************************************/
 header{
-  background-image: url(../images/banerr.jpg);
+  background: url(../images/banerr.jpg) 100% 100% no-repeat;
   background-size: cover;
 }
 header .header-content{
@@ -334,56 +334,48 @@ button:hover::after {
     z-index: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
   
   .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    margin: 15px auto;
+    width: 324px;
+    height: 340px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 29px 4px rgba(0, 0, 0, 0.137);
     cursor: pointer;
     transition: 0.4s;
+    background-color: #FFF;
   }
   
   .card .card_image {
-    width: inherit;
-    height: inherit;
-    border-radius: 40px;
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .card .card_image img {
     width: inherit;
     height: inherit;
-    border-radius: 40px;
     object-fit: cover;
   }
   
   .card .card_title {
     text-align: center;
-    border-radius: 0px 0px 40px 40px;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 30px;
-    margin-top: -80px;
-    height: 40px;
+    color: #000000;
   }
   
   .card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-      -5px -5px 30px 15px rgba(0,0,0,0.22);
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 29px 4px rgba(0,0,0,0.25);
   }
   
-  .title-white {
-    color: white;
-  }
-  
-  .title-black {
-    color: black;
-  }
   .goods .title-block,
   .goods h2{
     padding-left: 150px;
@@ -412,7 +404,7 @@ button:hover::after {
 .advantages{
   background-color: #42382a;
   padding-top: 5em;
-  padding-bottom: 4em;
+  padding-bottom: 8em;
   color: #FFF;
 }
 .advantages .title-block,
@@ -428,9 +420,16 @@ button:hover::after {
 .advantages-block{
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 4em;
 }
 .advantages-card{
-  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.advantages-card .advantages-img{
+  padding: 15px;
 }
 /****************************************************************/
 /* Box */
@@ -452,4 +451,24 @@ button:hover::after {
 .box-block button{
   height: 40px;
   padding: 10px 25px;
+}
+/****************************************************************/
+/* Footer */
+/****************************************************************/
+.authors{
+  background-color: #42382a;
+  color: #FFF;
+  padding: 5px 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+}
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.rights{
+  width: 300px;
 }
