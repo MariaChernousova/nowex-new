@@ -11,8 +11,19 @@
     justify-content: space-between;
 }
 .contacts-info{
-    padding: 10px 335px 10px 0;
+    padding: 0 135px 10px 0;
+    width: 600px;
 }
 .contacts-info .phones{
-    
+    padding: 0;
+    color: black;
+}
+.maps iframe{
+    width: 800px;
+    height: 320px;
+    padding-bottom: 15px;
+}
+hr{
+    align: center;
+    width: 70%;
 }
