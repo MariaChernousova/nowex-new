@@ -1,0 +1,18 @@
+.contacts{
+    padding: 0 10%;
+    margin-bottom: 10px;  
+}
+.contacts h1{
+    text-align: center;
+}
+.contacts-direction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contacts-info{
+    padding: 10px 335px 10px 0;
+}
+.contacts-info .phones{
+    
+}
