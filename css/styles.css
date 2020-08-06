@@ -1,474 +1,473 @@
-*{
-  padding-right: 0;
-}
 body{
-    padding:0;
-    margin: 0;
-    background-color: #f8f5f4;
+  padding:0;
+  margin: 0;
+  background-color: #f8f5f4;
 }
 li{
-    list-style: none;
+  list-style: none;
 }
 .header-content, nav, .header-text, .about-block, .manufacturers, .goods, .advantages, .box, footer{
-  padding: 0 10%;
-  margin-bottom: 10px;
+padding: 0 10%;
+margin-bottom: 10px;
 }
 
 /****************************************************************/
 /* Header */
 /****************************************************************/
 header{
-  background: url(../images/banerr.jpg) 100% 100% no-repeat;
-  background-size: cover;
+background: url(../images/banerr.jpg) 100% 100% no-repeat;
+background-size: cover;
+padding-bottom: 1px;
 }
 header .header-content{
-  display: flex;
-  flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
 }
 .logo{
-  padding-top: 10px;
+padding-top: 10px;
 }
 .logo img{
-  max-width: 300px;
-  height: auto;
+max-width: 300px;
+height: auto;
 }
 .phones, .adress, .language{
-  padding: 0 65px;
-  color: #FFF;
+padding: 0 65px;
+color: #FFF;
 }
 header .header-text{
-  padding-bottom: 15%;
-  color: #FFF;
-  max-width: 1000px;
-  font-size: x-large;
+padding-bottom: 15%;
+color: #FFF;
+max-width: 1000px;
+font-size: x-large;
+margin-top: 15%;
 }
 button {
-  font-family: Hack, monospace;
-  background: #ff1515;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: medium;
-  padding: 10px 35px;
-  border: 0;
-  transition: all 0.5s;
-  width: auto;
-  position: relative;
+font-family: Hack, monospace;
+background: #ff1515;
+color: #ffffff;
+cursor: pointer;
+font-size: medium;
+padding: 10px 35px;
+border: 0;
+transition: all 0.5s;
+width: auto;
+position: relative;
 }
 button::after {
-  content: "\f105";
-  font-family: "FontAwesome";
-  font-weight: 400;
-  position: absolute;
-  left: 85%;
-  top: 31%;
-  right: 5%;
-  bottom: 0;
-  opacity: 0;
+content: "\f105";
+font-family: "FontAwesome";
+font-weight: 400;
+position: absolute;
+left: 85%;
+top: 31%;
+right: 5%;
+bottom: 0;
+opacity: 0;
 }
 button:hover {
-  background: #ff1515;
-  transition: all 0.5s;
-  box-shadow: 0px 6px 15px #94580980;
-  padding: 10px 45px 10px 25px;
+background: #ff1515;
+transition: all 0.5s;
+box-shadow: 0px 6px 15px #94580980;
+padding: 10px 45px 10px 25px;
 }
 button:hover::after {
-  opacity: 1;
-  transition: all 0.5s;
+opacity: 1;
+transition: all 0.5s;
 }
 
 /****************************************************************/
 /* Navigation */
 /****************************************************************/
 .menu {
-    background: #FFF;
-    height: 4rem;
-    margin: 0 10%;
-    margin-bottom: 15%;
+  background: #FFF;
+  height: 4rem;
+  margin: 0 10%;
+  margin-bottom: 2%;
+}
+.menu ol {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.menu > ol {
+  max-width: 1000px;
+  padding: 0 2rem;
+  display: flex;
+}
+.menu > ol > .menu-item {
+  flex: 1;
+  padding: 0.75rem 0;
+}
+.menu > ol > .menu-item:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  bottom: 5px;
+  left: calc(50% - 2px);
+  background: #FECEAB;
+  will-change: transform;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+.menu > ol > .menu-item:hover:after {
+  transform: scale(1);
+}
+.menu-item {
+  position: relative;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.menu-item a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  color: #000000;
+}
+.sub-menu .menu-item {
+  padding: 0.75rem 0;
+  background: #FFF;
+  opacity: 0;
+  transform-origin: bottom;
+  animation: enter 0.2s ease forwards;
+}
+.sub-menu .menu-item:nth-child(1) {
+  animation-duration: 0.2s;
+  animation-delay: 0s;
+}
+.sub-menu .menu-item:nth-child(2) {
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+}
+.sub-menu .menu-item:nth-child(3) {
+  animation-duration: 0.4s;
+  animation-delay: 0.2s;
+}
+.sub-menu .menu-item:hover {
+  background: #F8B195;
+}
+.sub-menu .menu-item a {
+  padding: 0 0.75rem;
+}
+@media screen and (max-width: 600px) {
+  .sub-menu .menu-item {
+    background: #C06C84;
   }
-  .menu ol {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    position: relative;
   }
-  .menu > ol {
-    max-width: 1000px;
-    padding: 0 2rem;
-    display: flex;
-  }
-  .menu > ol > .menu-item {
-    flex: 1;
-    padding: 0.75rem 0;
-  }
-  .menu > ol > .menu-item:after {
+  .menu:after {
     content: "";
     position: absolute;
-    width: 4px;
+    top: calc(50% - 2px);
+    right: 1rem;
+    width: 30px;
     height: 4px;
-    border-radius: 50%;
-    bottom: 5px;
-    left: calc(50% - 2px);
-    background: #FECEAB;
-    will-change: transform;
-    transform: scale(0);
-    transition: transform 0.2s ease;
+    background: #ccc;
+    box-shadow: 0 10px #FFF, 0 -10px #FFF;
   }
-  .menu > ol > .menu-item:hover:after {
-    transform: scale(1);
+  .menu > ol {
+    display: none;
+    background: #ccc;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    animation: fade 0.2s ease-out;
   }
-  .menu-item {
-    position: relative;
-    line-height: 2.5rem;
-    text-align: center;
-  }
-  .menu-item a {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    color: #000000;
-  }
-  .sub-menu .menu-item {
-    padding: 0.75rem 0;
-    background: #FFF;
+  .menu > ol > .menu-item {
+    flex: 0;
     opacity: 0;
-    transform-origin: bottom;
-    animation: enter 0.2s ease forwards;
+    animation: enter 0.3s ease-out forwards;
   }
-  .sub-menu .menu-item:nth-child(1) {
-    animation-duration: 0.2s;
+  .menu > ol > .menu-item:nth-child(1) {
     animation-delay: 0s;
   }
-  .sub-menu .menu-item:nth-child(2) {
-    animation-duration: 0.3s;
+  .menu > ol > .menu-item:nth-child(2) {
     animation-delay: 0.1s;
   }
-  .sub-menu .menu-item:nth-child(3) {
-    animation-duration: 0.4s;
+  .menu > ol > .menu-item:nth-child(3) {
     animation-delay: 0.2s;
   }
-  .sub-menu .menu-item:hover {
-    background: #F8B195;
+  .menu > ol > .menu-item:nth-child(4) {
+    animation-delay: 0.3s;
   }
-  .sub-menu .menu-item a {
-    padding: 0 0.75rem;
+  .menu > ol > .menu-item:nth-child(5) {
+    animation-delay: 0.4s;
   }
-  @media screen and (max-width: 600px) {
-    .sub-menu .menu-item {
-      background: #C06C84;
-    }
+  .menu > ol > .menu-item + .menu-item {
+    margin-top: 0.75rem;
   }
-  @media screen and (max-width: 600px) {
-    .menu {
-      position: relative;
-    }
-    .menu:after {
-      content: "";
-      position: absolute;
-      top: calc(50% - 2px);
-      right: 1rem;
-      width: 30px;
-      height: 4px;
-      background: #ccc;
-      box-shadow: 0 10px #FFF, 0 -10px #FFF;
-    }
-    .menu > ol {
-      display: none;
-      background: #ccc;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-      animation: fade 0.2s ease-out;
-    }
-    .menu > ol > .menu-item {
-      flex: 0;
-      opacity: 0;
-      animation: enter 0.3s ease-out forwards;
-    }
-    .menu > ol > .menu-item:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .menu > ol > .menu-item:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    .menu > ol > .menu-item:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    .menu > ol > .menu-item:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-    .menu > ol > .menu-item:nth-child(5) {
-      animation-delay: 0.4s;
-    }
-    .menu > ol > .menu-item + .menu-item {
-      margin-top: 0.75rem;
-    }
-    .menu > ol > .menu-item:after {
-      left: auto;
-      right: 1rem;
-      bottom: calc(50% - 2px);
-    }
-    .menu > ol > .menu-item:hover {
-      z-index: 1;
-    }
-    .menu:hover > ol {
-      display: flex;
-    }
-    .menu:hover:after {
-      box-shadow: none;
-    }
+  .menu > ol > .menu-item:after {
+    left: auto;
+    right: 1rem;
+    bottom: calc(50% - 2px);
   }
-  
-  .sub-menu {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    display: none;
+  .menu > ol > .menu-item:hover {
     z-index: 1;
   }
-  .menu-item:hover > .sub-menu {
-    display: block;
+  .menu:hover > ol {
+    display: flex;
   }
-  @media screen and (max-width: 600px) {
-    .sub-menu {
-      width: 100vw;
-      left: -2rem;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  .menu:hover:after {
+    box-shadow: none;
   }
-  
-  html, body {
-    font-size: 16px;
-    margin: 0;
+}
+
+.sub-menu {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+.menu-item:hover > .sub-menu {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .sub-menu {
+    width: 100vw;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
-  * {
-    box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: scaleY(0.98) translateY(10px);
   }
-  *:before, *:after {
-    box-sizing: inherit;
+  to {
+    opacity: 1;
+    transform: none;
   }
-  
-  a {
-    text-decoration: none;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes enter {
-    from {
-      opacity: 0;
-      transform: scaleY(0.98) translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: none;
-    }
+  to {
+    opacity: 1;
   }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+}
 /****************************************************************/
 /* About */
 /****************************************************************/
 .about-block{
-  width: 1020px;
-  height: 700px;
-  display: block;
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -80px;
-  padding: 80px 90px;
-  z-index: 2;
+width: 1020px;
+height: 700px;
+display: block;
+background-color: #ffffff;
+margin-left: auto;
+margin-right: auto;
+margin-top: -80px;
+padding: 80px 90px;
+z-index: 2;
 }
 .about iframe{
-  z-index: 1;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+z-index: 1;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 .about-block p{
-  padding-bottom: 3em;
+padding-bottom: 3em;
 }
 .about{
-  margin-bottom: 14em;
+margin-bottom: 14em;
 }
 /****************************************************************/
 /* Manufacturers */
 /****************************************************************/
 .manufacturers-block{
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 6em;
+display: flex;
+flex-direction: row;
+margin-bottom: 6em;
 }
 .manufacturers .title-block,
 .manufacturers h2{
-  padding-left: 150px;
+padding-left: 150px;
 }
 /****************************************************************/
 /* Gallary */
 /****************************************************************/
 .gallery img{
-  max-height: 400px;
-  padding: 6px;
+max-height: 400px;
+padding: 6px;
 }
 .gallery{
-  background-color: #42382a;
-  padding: 2em 0 1em 0;
-  margin-bottom: 4em;
+background-color: #42382a;
+padding: 2em 0 1em 0;
+margin-bottom: 4em;
 }
 .gallery .title-block,
 .gallery h2{
-  padding-left: 290px;
-  color: #FFF;
+padding-left: 290px;
+color: #FFF;
 }
 /****************************************************************/
 /* Goods cards */
 /****************************************************************/
 .cards-list {
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    margin: 15px auto;
-    width: 324px;
-    height: 340px;
-    border-radius: 6px;
-    box-shadow: 0px 0px 29px 4px rgba(0, 0, 0, 0.137);
-    cursor: pointer;
-    transition: 0.4s;
-    background-color: #FFF;
-  }
-  
-  .card .card_image {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .card .card_image img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-  }
-  
-  .card .card_title {
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    color: #000000;
-  }
-  
-  .card:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0px 0px 29px 4px rgba(0,0,0,0.25);
-  }
-  
-  .goods .title-block,
-  .goods h2{
-    padding-left: 150px;
-  }
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
-  .goods button{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 200px;
+.card {
+  margin: 15px auto;
+  width: 324px;
+  height: 340px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 29px 4px rgba(0, 0, 0, 0.137);
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #FFF;
+}
+
+.card .card_image {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000;
+}
+
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0px 0px 29px 4px rgba(0,0,0,0.25);
+}
+
+.goods .title-block,
+.goods h2{
+  padding-left: 150px;
+}
+
+.goods button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
-  
-  @media all and (max-width: 500px) {
-    .card-list {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
-  }
+}
 /****************************************************************/
 /* Advantages */
 /****************************************************************/
 /* .advantages-header{
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
 } */
 .advantages{
-  background-color: #42382a;
-  padding-top: 5em;
-  padding-bottom: 8em;
-  color: #FFF;
+background-color: #42382a;
+padding-top: 5em;
+padding-bottom: 8em;
+color: #FFF;
 }
 .advantages .title-block,
 .advantages h2{
-  padding-left: 150px;
+padding-left: 150px;
 }
 .advantages-header img{
-  width: 417px;
-  height: auto;
-  margin-top: -298px;
-  float: right;
+width: 417px;
+height: auto;
+margin-top: -298px;
+float: right;
 }
 .advantages-block{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 4em;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin-top: 4em;
 }
 .advantages-card{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 .advantages-card .advantages-img{
-  padding: 15px;
+padding: 15px;
 }
 /****************************************************************/
 /* Box */
 /****************************************************************/
 .box{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
-  padding: 20px 45px;
-  margin-top: -40px;
-  background-color: #FFF;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 800px;
+padding: 20px 45px;
+margin-top: -40px;
+background-color: #FFF;
 }
 .box-block{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 .box-block button{
-  height: 40px;
-  padding: 10px 25px;
+height: 40px;
+padding: 10px 25px;
 }
 /****************************************************************/
 /* Footer */
 /****************************************************************/
 .authors{
-  background-color: #42382a;
-  color: #FFF;
-  padding: 5px 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 12px;
+background-color: #42382a;
+color: #FFF;
+padding: 5px 35px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-size: 12px;
 }
 footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 }
 .rights{
-  width: 300px;
+width: 300px;
 }

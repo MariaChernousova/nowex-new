@@ -1,0 +1,29 @@
+.contacts{
+    padding: 0 10%;
+    margin-bottom: 10px;  
+}
+.contacts h1{
+    text-align: center;
+}
+.contacts-direction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contacts-info{
+    padding: 0 135px 10px 0;
+    width: 600px;
+}
+.contacts-info .phones{
+    padding: 0;
+    color: black;
+}
+.maps iframe{
+    width: 800px;
+    height: 320px;
+    padding-bottom: 15px;
+}
+hr{
+    align: center;
+    width: 70%;
+}
