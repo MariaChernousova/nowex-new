@@ -96,7 +96,7 @@ button:hover::after {
   }
   .menu > ol > .menu-item {
     flex: 1;
-    padding: 0.75rem 0;
+    padding: 0.75rem 2rem;
   }
   .menu > ol > .menu-item:after {
     content: "";
@@ -149,7 +149,8 @@ button:hover::after {
     background: #F8B195;
   }
   .sub-menu .menu-item a {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
+    display: block;
   }
   @media screen and (max-width: 600px) {
     .sub-menu .menu-item {
