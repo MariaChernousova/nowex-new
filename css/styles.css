@@ -6,9 +6,12 @@ body{
 li{
     list-style: none;
 }
-.header-content, nav, .header-text, .about-block, .manufacturers, .goods, .advantages, .box, footer{
+.header-content, nav, .header-text, .about-block, .manufacturers, .goods, .advantages, .box, footer, .about{
   padding: 0 10%;
   margin-bottom: 10px;
+}
+p{
+  line-height: 1.5;
 }
 
 /****************************************************************/
