@@ -1,3 +1,7 @@
+.goods-info{
+    display: flex;
+    flex-direction: row;
+}
 .goods-gallery{
     margin: 20px;
     width: 50%;
@@ -20,4 +24,12 @@ button:hover{
     margin: 0;
     padding: 0;
     border-radius: 50%;
+}
+.main-info ul{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.main-info ul li{
+    width: 150px ;
 }
